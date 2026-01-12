@@ -7,13 +7,16 @@ body {
 }
 
 .container {
-        max-width: 600px; 
+    /* 1. La mise en page */
+    max-width: 1000px; /* J'ai agrandi un peu pour que le menu tienne à l'aise */
+    margin: 40px auto; /* Centré au milieu de la page */
+    display: flex; /* C'EST LA CLÉ : permet d'aligner les enfants côte à côte */
     
-    margin: 40px auto; 
-    padding: 40px;    
+    /* 2. Le style visuel (Card style) */
     background-color: #F9F7F5; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     border-radius: 8px;
+    overflow: hidden; /* Important pour que le menu ne dépasse pas des bords arrondis */
 }
 
 h1, h2, h3 {
@@ -27,7 +30,6 @@ h1, h2, h3 {
 
 h1 {
     font-size: 2.5em;
-    letter-spacing: -1px;
     letter-spacing: 2px;
     margin-bottom: 40px;
 }
@@ -36,7 +38,7 @@ h2 {
     font-size: 1.5em;
     border-bottom: 2px solid #D1CDC7;
     padding-bottom: 10px;
-    width: 100%;;
+    width: 100%;
 }
 
 h3 {
@@ -55,14 +57,9 @@ p{
 	text-align: justify;
 	hyphens: auto; 
     -webkit-hyphens: auto;
-    -ms-hyphens: auto
+    -ms-hyphens: auto;
 	line-height: 1.6;
 	margin-bottom: 20px;
-}
-.container {
-    max-width: 800px;
-    margin: 0 auto;   
-    padding: 20px;    
 }
 
 .image-centree {
@@ -95,4 +92,51 @@ p{
     text-decoration: none;
     cursor: pointer;
     color: white;
+}
+
+/* La colonne de Gauche (Menu) */
+.sidebar {
+    width: 250px; /* Largeur fixe */
+    background-color: #E6E2DD; /* Une couleur légèrement plus foncée pour le contraste */
+    padding: 30px 20px; /* De l'espace à l'intérieur */
+    flex-shrink: 0; /* Empêche le menu de s'écraser si la fenêtre rétrécit */
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    position: sticky; /* Magie ! */
+    top: 0; /* Colle au plafond */
+}
+
+/* La colonne de Droite (Texte) */
+.content {
+    flex: 1; /* Prend toute la place restante */
+    padding: 40px; /* Aère le texte */
+}
+
+/* --- LE STYLE DU MENU LATERAL --- */
+
+/* 1. On enlève les puces (points noirs) et le décalage */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px; /* Un peu d'espace sous le haut de la barre */
+}
+
+/* 2. On écarte les liens les uns des autres */
+.sidebar li {
+    margin-bottom: 15px;
+}
+
+/* 3. Le style du texte des liens */
+.sidebar a {
+    text-decoration: none; /* Enlève le soulignement moche */
+    color: #5D544F; /* La même couleur que vos titres */
+    font-family: 'Montserrat', sans-serif; /* On utilise votre belle police de titre */
+    font-weight: bold;
+    font-size: 1.1em;
+    display: block; /* Rend toute la zone cliquable, pas juste le texte */
+    transition: color 0.3s; /* Une petite animation douce */
+}
+
+/* 4. Quand on passe la souris dessus */
+.sidebar a:hover {
+    color: #C09F8C; /* Votre couleur "btn" pour le rappel */
 }
