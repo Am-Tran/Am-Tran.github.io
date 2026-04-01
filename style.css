@@ -236,3 +236,22 @@ p { text-align: justify; margin-bottom: 20px; }
     margin-top: auto;
     padding-top: 15px;
 }
+
+.demo-container {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 15px 0;
+    border: 1px solid #D1CDC7;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.project-gif {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-gif {
+    transform: scale(1.02); /* Petit zoom au survol pour le côté interactif */
+}
