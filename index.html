@@ -1,39 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-	<link rel="stylesheet" href="style.css"/>
-	<title> Am-Tran / Portfolio </title>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Am-Tran / Portfolio Data Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-	<div class="container">
-	<nav class="sidebar">
-        <ul>
-            <li><a href="#projets">Projet 1</a></li>
-            <li><a href="#projets">Projet 2</a></li>
-        </ul>
-    </nav>
 
-    <main class="content">
-		<h1> Am-Tran / Portfolio </h1>
-			<p class="intro"> Bienvenue sur mon portfolio. Après une première carrière technique dans l'audiovisuel, je me reconvertis dans la Data.
-				Ce site (et ce Github) documente mon apprentissage : de l'interrogation d'API et le scraping avec Python à la visualisation de données complexes.</p>
-		<h2> À propos </h2>
-			<p> Mixeuse et technicienne son expérimentée, j'ai développé une rigueur technique et une écoute du détail.
-				Aujourd'hui en reconversion vers la Data Analyse, j'apporte cette même précision au nettoyage de données et à la création de modèles prédictifs. </p> 
-		<h2> Mes projets </h2>
-			<p> A venir prochainement ... </p>
-		<h2> Ma reconversion </h2>
-			<p> J'ai commencé ma formation de Data Analyste fin Septembre, il s'agit d'un bootcamp de 5 mois à la 
-			<a href= "http://www.wildcodeschool.com"> Wild Code School </a> !</p>
-			<img src= "https://preview.redd.it/vc4kv60591u61.jpg?width=1080&crop=smart&auto=webp&s=f2f034ff49c20d192b22c6e7e199e1b7f8035f4e" alt="The Adventure Begins" class="image-centree">
-		<h2> Contact </h2>
-			<div style="text-align: center;">
-		    	<a href="https://github.com/Am-Tran" class="btn">GitHub</a>
-		    	&nbsp; <a href="https://www.linkedin.com/in/am%C3%A9lie-tran-981325a5/" class="btn">LinkedIn</a>
+    <div class="container">
+        <nav class="sidebar">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="#propos">À propos</a></li>
+                <li><a href="#pathfinder">🚀 PathFinder</a></li>
+                <li><a href="#films">🎬 Recommandation Films</a></li>
+                <li><a href="#velos">🚲 Business Vélo</a></li>
+                <li><a href="#nutrition">🍏 Nutrition & Santé</a></li>
+                <li><a href="#anime">🇯🇵 Analyse Animes</a></li>
+                <li><a href="#logistique">📦 Logistique Maquettes</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <header>
+                <h1>Am-Tran / Portfolio</h1>
+                <p class="intro">
+                    Ancienne mixeuse et technicienne son, je transpose aujourd'hui ma rigueur technique et mon analyse du signal vers le monde de la <strong>Data</strong>. 
+                    Ce portfolio regroupe mes travaux réalisés durant mon bootcamp à la Wild Code School.
+                </p>
+            </header>
+
+            <section id="propos">
+                <h2>À propos</h2>
+                <p>
+                    Le mixage audio m'a appris à gérer des flux complexes et à traquer le moindre "bruit" parasite. 
+                    Aujourd'hui, j'applique cette même exigence au nettoyage de données (ETL) et à l'analyse métier.
+                </p>
+            </section>
+
+            <section id="projets">
+                <h2>Mes Projets</h2>                
+				<div class="project-card featured" id="pathfinder">
+					<div class="project-info">
+						<div class="card-header">
+							<span class="tag"><i class="fas fa-star"></i> Projet Principal</span>
+							<span class="repo-status">Public Repo</span>
+						</div>
+						<h3><i class="fas fa-terminal"></i> PathFinder : Monitoring Emploi Data</h3>
+						<p>Pipeline ETL autonome qui scrappe, dédoublonne et centralise les offres Data Junior en France.</p>
+						<div class="stack-list">
+							<span class="stack-badge">python</span>
+							<span class="stack-badge">selenium</span>
+							<span class="stack-badge">pandas</span>
+							<span class="stack-badge">streamlit</span>
+						</div>
+						<div class="card-footer">
+							<a href="https://pathfinder-data.streamlit.app/" class="btn" target="_blank"><i class="fas fa-rocket"></i> Lancer l'Appli</a>
+							<a href="https://github.com/Am-Tran/PathFinder" class="btn-small"><i class="fab fa-github"></i> Source Code</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="project-card" id="films">
+					<div class="project-info">
+						<h3><i class="fas fa-film"></i> Recommandation Films</h3>
+						<p>Moteur de recommandation basé sur le contenu (Cosine Similarity).</p>
+						<div class="stack-list">
+							<span class="stack-badge">scikit-learn</span>
+							<span class="stack-badge">ml</span>
+						</div>
+						<a href="https://github.com/Am-Tran" class="btn-small"><i class="fab fa-github"></i> Source Code</a>
+					</div>
+				</div>
+				
+				<div class="project-card" id="velos">
+					<div class="project-info">
+						<div class="card-header">
+							<span class="tag">Business Intelligence</span>
+						</div>
+						<h3><i class="fas fa-chart-pie"></i> Analyse Business : Vélos</h3>
+						<p>Analyse de la rentabilité et des KPI ventes via un dashboard interactif.</p>
+						
+						<div class="stack-list">
+							<span class="stack-badge">Power BI</span>
+							<span class="stack-badge">DAX</span>
+							<span class="stack-badge">SQL</span>
+						</div>
+						<a href="LIEN_VERS_TON_PDF_OU_WEB" class="btn-small"><i class="fas fa-eye"></i> Voir le Dashboard</a>
+					</div>
+				</div>
 			</div>
-	</main>
-	</div>
-</body> 
+                    
+            </section>
+
+            <section id="reconversion">
+                <h2>Ma reconversion</h2>
+                <p>Bootcamp de 5 mois à la <strong>Wild Code School</strong> (Septembre - Février).</p>
+                
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <div style="text-align: center; margin-bottom: 50px;">
+                    <a href="https://github.com/Am-Tran" class="btn">GitHub</a>
+                    <a href="https://www.linkedin.com/in/am%C3%A9lie-tran-981325a5/" class="btn">LinkedIn</a>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
 </html>

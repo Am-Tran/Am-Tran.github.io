@@ -1,142 +1,238 @@
+/* --- VARIABLES ET RESET --- */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-	background-color: #E6E2DD;
-	color: #434343;
-	font-family: 'Lato', sans-serif;
+    background-color: #E6E2DD;
+    color: #434343;
+    font-family: 'Lato', sans-serif;
     line-height: 1.6;
     margin: 0;
 }
 
+/* --- MISE EN PAGE GLOBALE --- */
 .container {
-    /* 1. La mise en page */
-    max-width: 1000px; /* J'ai agrandi un peu pour que le menu tienne à l'aise */
-    margin: 40px auto; /* Centré au milieu de la page */
-    display: flex; /* C'EST LA CLÉ : permet d'aligner les enfants côte à côte */
-    
-    /* 2. Le style visuel (Card style) */
-    background-color: #F9F7F5; 
+    max-width: 1100px;
+    margin: 40px auto;
+    display: flex;
+    background-color: #F9F7F5;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-radius: 8px;
-    overflow: hidden; /* Important pour que le menu ne dépasse pas des bords arrondis */
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 90vh;
 }
 
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    color: #5D544F;
-    display: block; 
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 2.5em;
-    letter-spacing: 2px;
-    margin-bottom: 40px;
-}
-
-h2 {
-    font-size: 1.5em;
-    border-bottom: 2px solid #D1CDC7;
-    padding-bottom: 10px;
-    width: 100%;
-}
-
-h3 {
-	font-size: 1em;
-}
-
-div.titre-section {
-    text-align: center; 
-}
-
-
-
-p{
-	font-size: 18px;	
-	font-family: 'Lato', sans-serif;
-	text-align: justify;
-	hyphens: auto; 
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-	line-height: 1.6;
-	margin-bottom: 20px;
-}
-
-.image-centree {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;    
-    width: 30%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.btn {
-    display: inline-block;
-    background-color: #C09F8C;
-    color: white;
-    padding: 10px 24px;
-    border-radius: 30px; 
-    margin-top: 20px;
-    transition: all 0.3s ease;
-    border: none;
-    text-transform: uppercase;
-    font-size: 0.85em;
-    letter-spacing: 1px;
-}
-
-.btn:hover {
-    background-color: #9CAF88;
-    text-decoration: none;
-    cursor: pointer;
-    color: white;
-}
-
-/* La colonne de Gauche (Menu) */
+/* --- SIDEBAR (MENU GAUCHE) --- */
 .sidebar {
-    width: 250px; /* Largeur fixe */
-    background-color: #E6E2DD; /* Une couleur légèrement plus foncée pour le contraste */
-    padding: 30px 20px; /* De l'espace à l'intérieur */
-    flex-shrink: 0; /* Empêche le menu de s'écraser si la fenêtre rétrécit */
-    height: 100vh; /* Prend toute la hauteur de l'écran */
-    position: sticky; /* Magie ! */
-    top: 0; /* Colle au plafond */
+    width: 260px;
+    background-color: #f0edea;
+    padding: 40px 25px;
+    flex-shrink: 0;
+    border-right: 1px solid #D1CDC7;
 }
 
-/* La colonne de Droite (Texte) */
-.content {
-    flex: 1; /* Prend toute la place restante */
-    padding: 40px; /* Aère le texte */
+.sidebar h3 {
+    text-align: left;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #C09F8C;
 }
 
-/* --- LE STYLE DU MENU LATERAL --- */
-
-/* 1. On enlève les puces (points noirs) et le décalage */
 .sidebar ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 20px; /* Un peu d'espace sous le haut de la barre */
 }
 
-/* 2. On écarte les liens les uns des autres */
 .sidebar li {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
-/* 3. Le style du texte des liens */
 .sidebar a {
-    text-decoration: none; /* Enlève le soulignement moche */
-    color: #5D544F; /* La même couleur que vos titres */
-    font-family: 'Montserrat', sans-serif; /* On utilise votre belle police de titre */
+    text-decoration: none;
+    color: #5D544F;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    font-size: 1.1em;
-    display: block; /* Rend toute la zone cliquable, pas juste le texte */
-    transition: color 0.3s; /* Une petite animation douce */
+    font-size: 0.95em;
+    transition: all 0.3s;
 }
 
-/* 4. Quand on passe la souris dessus */
 .sidebar a:hover {
-    color: #C09F8C; /* Votre couleur "btn" pour le rappel */
+    color: #C09F8C;
+    padding-left: 5px;
+}
+
+/* --- CONTENU (DROITE) --- */
+.content {
+    flex: 1;
+    padding: 40px 60px;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #5D544F;
+}
+
+h1 { font-size: 2.2em; margin-bottom: 10px; }
+h2 { 
+    font-size: 1.6em; 
+    border-bottom: 2px solid #D1CDC7; 
+    padding-bottom: 10px; 
+    margin-top: 50px;
+}
+
+p { text-align: justify; margin-bottom: 20px; }
+
+/* --- GRILLE DE PROJETS --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid #D1CDC7;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.project-card.featured {
+    grid-column: 1 / -1;
+    background-color: #fffaf7;
+    border: 2px solid #C09F8C;
+}
+
+.tag {
+    background: #C09F8C;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.project-card h3 {
+    margin: 15px 0 10px 0;
+    color: #5D544F;
+    text-align: left;
+}
+
+.stack {
+    font-size: 0.85em;
+    color: #888;
+}
+
+/* --- BOUTONS --- */
+.btn, .btn-small {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn {
+    background-color: #C09F8C;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    margin: 10px 5px;
+}
+
+.btn:hover { background-color: #9CAF88; }
+
+.btn-small {
+    border: 1px solid #C09F8C;
+    color: #C09F8C;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.8em;
+}
+
+.btn-small:hover { background: #C09F8C; color: white; }
+
+/* --- IMAGES --- */
+.image-centree {
+    display: block;
+    margin: 30px auto;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .container { flex-direction: column; margin: 0; }
+    .sidebar { width: 100%; height: auto; position: static; }
+    .content { padding: 20px; }
+}
+
+/* --- LOOK TECH & BADGES --- */
+
+/* La police "Code" pour les technos */
+.stack-list {
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.stack-badge {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #434343; /* Gris foncé */
+    color: #9CAF88; /* Ton vert pour le contraste */
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+}
+
+/* Header de carte façon GitHub */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.repo-status {
+    font-size: 0.7em;
+    color: #888;
+    border: 1px solid #D1CDC7;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+/* Titres de projets avec icônes */
+.project-card h3 i {
+    margin-right: 10px;
+    color: #C09F8C;
+    font-size: 0.9em;
+}
+
+/* Animation sur les icônes au survol */
+.project-card:hover h3 i {
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+/* Footer de carte */
+.card-footer {
+    margin-top: auto;
+    padding-top: 15px;
 }
