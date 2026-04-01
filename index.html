@@ -12,35 +12,41 @@
 
     <div class="container">
         <nav class="sidebar">
-            <h3>Navigation</h3>
-            <ul>
-                <li><a href="#propos">À propos</a></li>
-                <li><a href="#pathfinder">🚀 PathFinder</a></li>
-                <li><a href="#films">🎬 Recommandation Films</a></li>
-                <li><a href="#velos">🚲 Business Vélo</a></li>
-                <li><a href="#nutrition">🍏 Nutrition & Santé</a></li>
-                <li><a href="#anime">🇯🇵 Analyse Animes</a></li>
-                <li><a href="#logistique">📦 Logistique Maquettes</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <h3>Dashboard</h3>
+            <ul>                
+                <li><a href="#pathfinder"><i class="fas fa-rocket"></i> PathFinder</a></li>
             </ul>
+            <div class="sidebar-contact">                
+                <h3>Dépôts & Analyses</h3>
+                <ul>
+                    <li><a href="#films"><i class="fas fa-brain"></i> Recommandation Films</a></li>
+                    <li><a href="#velos"><i class="fas fa-chart-line"></i> Business Vélo</a></li>
+                    <li><a href="#nutrition"><i class="fas fa-flask"></i> Nutrition & Santé</a></li>
+                    <li><a href="#anime"><i class="fas fa-play-circle"></i> Analyse Animes</a></li>
+                    <li><a href="#logistique"><i class="fas fa-truck-loading"></i> Logistique Maquettes</a></li>
+                </ul>                
+            </div>
+            <div class="sidebar-contact">
+                <h3>Contact</h3>
+                <a href="https://www.linkedin.com/in/am%C3%A9lie-tran-981325a5/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/Am-Tran" target="_blank"><i class="fab fa-github"></i> GitHub</a>                
+            </div>
+
+            
+
+
         </nav>
+
+
 
         <main class="content">
             <header>
-                <h1>Am-Tran / Portfolio</h1>
+                <h1>Amélie Tran / Portfolio</h1>
                 <p class="intro">
                     Ancienne mixeuse et technicienne son, je transpose aujourd'hui ma rigueur technique et mon analyse du signal vers le monde de la <strong>Data</strong>. 
                     Ce portfolio regroupe mes travaux réalisés durant mon bootcamp à la Wild Code School.
                 </p>
-            </header>
-
-            <section id="propos">
-                <h2>À propos</h2>
-                <p>
-                    Le mixage audio m'a appris à gérer des flux complexes et à traquer le moindre "bruit" parasite. 
-                    Aujourd'hui, j'applique cette même exigence au nettoyage de données (ETL) et à l'analyse métier.
-                </p>
-            </section>
+            </header>            
 
             <section id="projets">
                 <h2>Mes Projets</h2>                
@@ -67,52 +73,106 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="project-card" id="films">
-					<div class="project-info">
-						<h3><i class="fas fa-film"></i> Recommandation Films</h3>
-						<p>Moteur de recommandation basé sur le contenu (Cosine Similarity).</p>
-						<div class="stack-list">
-							<span class="stack-badge">scikit-learn</span>
-							<span class="stack-badge">ml</span>
-						</div>
-						<a href="https://github.com/Am-Tran" class="btn-small"><i class="fab fa-github"></i> Source Code</a>
-					</div>
-				</div>
 				
-				<div class="project-card" id="velos">
-					<div class="project-info">
-						<div class="card-header">
-							<span class="tag">Business Intelligence</span>
-						</div>
-						<h3><i class="fas fa-chart-pie"></i> Analyse Business : Vélos</h3>
-						<p>Analyse de la rentabilité et des KPI ventes via un dashboard interactif.</p>
-						
-						<div class="stack-list">
-							<span class="stack-badge">Power BI</span>
-							<span class="stack-badge">DAX</span>
-							<span class="stack-badge">SQL</span>
-						</div>
-						<a href="LIEN_VERS_TON_PDF_OU_WEB" class="btn-small"><i class="fas fa-eye"></i> Voir le Dashboard</a>
-					</div>
-				</div>
-			</div>
-                    
-            </section>
+                <section id="propos">
+                    <h2>À propos</h2>
+                    <p>
+                        Le mixage audio m'a appris à gérer des flux complexes et à traquer le moindre "bruit" parasite. 
+                        Aujourd'hui, j'applique cette même exigence au nettoyage de données (ETL) et à l'analyse métier.
+                    </p>
+                </section>
+                <section id="projets">
+                    <h2>Dépôts & Analyses</h2>
+                    <div class="project-grid">
+                        <div class="project-card" id="films">
+                            <div class="project-info">
+                                <div class="card-header">
+                                    <span class="tag">Machine Learning</span>
+                                </div>
+                                <h3><i class="fas fa-film"></i> Recommandation de Films</h3>
+                                <p>Développement d'un moteur de recommandation basé sur la similarité cosinus pour suggérer des films aux utilisateurs.</p>
+                                <div class="stack-list">
+                                    <span class="stack-badge">Scikit-Learn</span>
+                                    <span class="stack-badge">Pandas</span>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://github.com/Am-Tran" class="btn-small" target="_blank"><i class="fab fa-github"></i> Voir le dépôt</a>
+                                </div>
+                            </div>
+                        </div>
 
-            <section id="reconversion">
-                <h2>Ma reconversion</h2>
-                <p>Bootcamp de 5 mois à la <strong>Wild Code School</strong> (Septembre - Février).</p>
-                
-            </section>
+                        <div class="project-card" id="velos">
+                            <div class="project-info">
+                                <div class="card-header">
+                                    <span class="tag">Business Intelligence</span>
+                                </div>
+                                <h3><i class="fas fa-bicycle"></i> Analyse Commerce de Vélos</h3>
+                                <p>Analyse de performance commerciale (KPIs, saisonnalité, marges) via SQL et dashboarding interactif.</p>
+                                <div class="stack-list">
+                                    <span class="stack-badge-bi">Power BI</span>
+                                    <span class="stack-badge">SQL</span>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn-small"><i class="fas fa-chart-line"></i> Voir l'analyse</a>
+                                </div>
+                            </div>
+                        </div>
 
-            <section id="contact">
-                <h2>Contact</h2>
-                <div style="text-align: center; margin-bottom: 50px;">
-                    <a href="https://github.com/Am-Tran" class="btn">GitHub</a>
-                    <a href="https://www.linkedin.com/in/am%C3%A9lie-tran-981325a5/" class="btn">LinkedIn</a>
-                </div>
-            </section>
+                        <div class="project-card" id="nutrition">
+                            <div class="project-info">
+                                <div class="card-header">
+                                    <span class="tag">Data Cleaning</span>
+                                </div>
+                                <h3><i class="fas fa-apple-alt"></i> Santé & Nutrition</h3>
+                                <p>Nettoyage massif et exploration de données nutritionnelles pour identifier des corrélations entre nutriments et scores de santé.</p>
+                                <div class="stack-list">
+                                    <span class="stack-badge">Python</span>
+                                    <span class="stack-badge">Numpy</span>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://github.com/Am-Tran" class="btn-small"><i class="fab fa-github"></i> Voir le dépôt</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" id="anime">
+                            <div class="project-info">
+                                <div class="card-header">
+                                    <span class="tag">Exploratory Data Analysis</span>
+                                </div>
+                                <h3><i class="fas fa-tv"></i> Analyse de l'Animation Japonaise</h3>
+                                <p>Étude statistique sur l'évolution du marché des Animes à travers le temps et analyse des préférences communautaires.</p>
+                                <div class="stack-list">
+                                    <span class="stack-badge">Pandas</span>
+                                    <span class="stack-badge">Plotly</span>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://github.com/Am-Tran" class="btn-small"><i class="fab fa-github"></i> Voir le dépôt</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" id="logistique">
+                            <div class="project-info">
+                                <div class="card-header">
+                                    <span class="tag">Optimisation Logistique</span>
+                                </div>
+                                <h3><i class="fas fa-boxes"></i> Boutique de Maquettes</h3>
+                                <p>Analyse de la chaîne logistique et optimisation de la rotation des stocks pour une boutique spécialisée.</p>
+                                <div class="stack-list">
+                                    <span class="stack-badge-bi">Power BI</span>
+                                    <span class="stack-badge">SQL</span>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn-small"><i class="fas fa-eye"></i> Voir le Dashboard</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>	       
+                 
+            </section>            
         </main>
     </div>
 </body>

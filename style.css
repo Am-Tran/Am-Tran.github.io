@@ -13,11 +13,11 @@ body {
 
 /* --- MISE EN PAGE GLOBALE --- */
 .container {
-    max-width: 1100px;
+    max-width: 1350px; /* On passe de 1100 à 1350 */
     margin: 40px auto;
     display: flex;
     background-color: #F9F7F5;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 25px rgba(0,0,0,0.08);
     border-radius: 12px;
     overflow: hidden;
     min-height: 90vh;
@@ -61,6 +61,42 @@ body {
 .sidebar a:hover {
     color: #C09F8C;
     padding-left: 5px;
+}
+
+.sidebar-contact {
+    margin-top: auto; /* Pousse la section vers le bas de la sidebar */
+    padding-top: 20px;
+    border-top: 1px solid #D1CDC7;
+}
+
+.sidebar-contact a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.sidebar-contact i {
+    color: #C09F8C;
+    width: 20px;
+}
+
+.sidebar li a {
+    display: flex;         /* Active l'alignement flexible */
+    align-items: center;   /* Centre l'icône et le texte verticalement */
+    gap: 12px;             /* Crée un espace fixe et propre entre l'icône et le texte */
+    text-decoration: none;
+    color: #5D544F;
+    transition: all 0.3s;
+}
+
+/* Si tu utilises des icônes FontAwesome, on leur donne une largeur fixe */
+/* Ça garantit que le texte commence au même pixel pour TOUTES les lignes */
+.sidebar li a i, .sidebar li a span {
+    width: 20px;           /* Largeur fixe pour l'icône */
+    text-align: center;    /* Centre l'icône dans ses 20px */
+    flex-shrink: 0;        /* Empêche l'icône de s'écraser */
 }
 
 /* --- CONTENU (DROITE) --- */
@@ -193,13 +229,34 @@ p { text-align: justify; margin-bottom: 20px; }
 
 .stack-badge {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #434343; /* Gris foncé */
-    color: #9CAF88; /* Ton vert pour le contraste */
-    padding: 3px 10px;
-    border-radius: 4px;
-    font-size: 0.75em;
+    background-color: #E2ECD9; /* Ton vert très éclairci */
+    color: #4A5D3F; /* Vert foncé pour le contraste */
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.8em;
     font-weight: bold;
-    border-bottom: 2px solid #333;
+    margin-right: 5px;
+    display: inline-block;
+    border: 1px solid #D5E2C8;
+}
+
+.stack-badge-bi {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #FFF4CC; /* Jaune pâle */
+    color: #856404; /* Brun/Doré foncé pour la lisibilité */
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-right: 5px;
+    display: inline-block;
+    border: 1px solid #FFEeba;
+}
+
+.stack-badge:hover, .stack-badge-bi:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+    cursor: default;
 }
 
 /* Header de carte façon GitHub */
