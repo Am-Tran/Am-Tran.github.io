@@ -13,11 +13,12 @@ body {
 
 /* --- MISE EN PAGE GLOBALE --- */
 .container {
-    max-width: 1350px; /* On passe de 1100 à 1350 */
+    max-width: 1350px;
+    /* On passe de 1100 à 1350 */
     margin: 40px auto;
     display: flex;
     background-color: #F9F7F5;
-    box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
     border-radius: 12px;
     overflow: hidden;
     min-height: 90vh;
@@ -40,7 +41,7 @@ body {
     margin-bottom: 15px;
     padding-left: 10px;
     color: #C09F8C;
-    
+
 }
 
 .sidebar ul {
@@ -67,9 +68,12 @@ body {
 }
 
 .sidebar-contact {
-    margin-top: 25px; /* Espace au-dessus du bloc */
-    padding-top: 20px; /* Espace entre la ligne et le contenu */
-    border-top: 2px solid #ffffff; /* La ligne blanche bien nette */
+    margin-top: 25px;
+    /* Espace au-dessus du bloc */
+    padding-top: 20px;
+    /* Espace entre la ligne et le contenu */
+    border-top: 2px solid #ffffff;
+    /* La ligne blanche bien nette */
 }
 
 .sidebar-contact a {
@@ -86,9 +90,12 @@ body {
 }
 
 .sidebar li a {
-    display: flex;         /* Active l'alignement flexible */
-    align-items: center;   /* Centre l'icône et le texte verticalement */
-    gap: 12px;             /* Crée un espace fixe et propre entre l'icône et le texte */
+    display: flex;
+    /* Active l'alignement flexible */
+    align-items: center;
+    /* Centre l'icône et le texte verticalement */
+    gap: 12px;
+    /* Crée un espace fixe et propre entre l'icône et le texte */
     text-decoration: none;
     color: #5D544F;
     padding: 8px 12px;
@@ -98,38 +105,56 @@ body {
 
 /* Si tu utilises des icônes FontAwesome, on leur donne une largeur fixe */
 /* Ça garantit que le texte commence au même pixel pour TOUTES les lignes */
-.sidebar li a i, .sidebar li a span {
-    width: 20px;           /* Largeur fixe pour l'icône */
-    text-align: center;    /* Centre l'icône dans ses 20px */
-    flex-shrink: 0;        /* Empêche l'icône de s'écraser */
+.sidebar li a i,
+.sidebar li a span {
+    width: 20px;
+    /* Largeur fixe pour l'icône */
+    text-align: center;
+    /* Centre l'icône dans ses 20px */
+    flex-shrink: 0;
+    /* Empêche l'icône de s'écraser */
 }
 
 .sidebar li a:hover {
-    background-color: #ffffff; /* Fond blanc pur au survol */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Petite ombre légère pour le relief */
-    color: #C09F8C; /* Ta couleur d'accent */
+    background-color: #ffffff;
+    /* Fond blanc pur au survol */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    /* Petite ombre légère pour le relief */
+    color: #C09F8C;
+    /* Ta couleur d'accent */
 }
 
 /* --- CONTENU (DROITE) --- */
 .content {
     flex: 1;
     padding: 40px 60px;
+    min-width: 0; /* TRÈS IMPORTANT pour Flexbox : permet au texte de se réduire */
+    overflow-x: hidden;
 }
 
-h1, h2 {
+
+h1,
+h2 {
     font-family: 'Montserrat', sans-serif;
     color: #5D544F;
 }
 
-h1 { font-size: 2.2em; margin-bottom: 10px; }
-h2 { 
-    font-size: 1.6em; 
-    border-bottom: 2px solid #D1CDC7; 
-    padding-bottom: 10px; 
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.6em;
+    border-bottom: 2px solid #D1CDC7;
+    padding-bottom: 10px;
     margin-top: 50px;
 }
 
-p { text-align: justify; margin-bottom: 20px; }
+p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
 
 /* --- GRILLE DE PROJETS --- */
 .project-grid {
@@ -152,7 +177,7 @@ p { text-align: justify; margin-bottom: 20px; }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .project-card.featured {
@@ -183,7 +208,8 @@ p { text-align: justify; margin-bottom: 20px; }
 }
 
 /* --- BOUTONS --- */
-.btn, .btn-small {
+.btn,
+.btn-small {
     display: inline-block;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -200,7 +226,9 @@ p { text-align: justify; margin-bottom: 20px; }
     margin: 10px 5px;
 }
 
-.btn:hover { background-color: #9CAF88; }
+.btn:hover {
+    background-color: #9CAF88;
+}
 
 .btn-small {
     border: 1px solid #C09F8C;
@@ -210,7 +238,10 @@ p { text-align: justify; margin-bottom: 20px; }
     font-size: 0.8em;
 }
 
-.btn-small:hover { background: #C09F8C; color: white; }
+.btn-small:hover {
+    background: #C09F8C;
+    color: white;
+}
 
 /* --- IMAGES --- */
 .image-centree {
@@ -218,14 +249,25 @@ p { text-align: justify; margin-bottom: 20px; }
     margin: 30px auto;
     width: 50%;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-    .container { flex-direction: column; margin: 0; }
-    .sidebar { width: 100%; height: auto; position: static; }
-    .content { padding: 20px; }
+    .container {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    .content {
+        padding: 20px;
+    }
 }
 
 /* --- LOOK TECH & BADGES --- */
@@ -240,8 +282,10 @@ p { text-align: justify; margin-bottom: 20px; }
 
 .stack-badge {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #E2ECD9; /* Ton vert très éclairci */
-    color: #4A5D3F; /* Vert foncé pour le contraste */
+    background-color: #E2ECD9;
+    /* Ton vert très éclairci */
+    color: #4A5D3F;
+    /* Vert foncé pour le contraste */
     padding: 4px 10px;
     border-radius: 6px;
     font-size: 0.8em;
@@ -253,8 +297,10 @@ p { text-align: justify; margin-bottom: 20px; }
 
 .stack-badge-bi {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #FFF4CC; /* Jaune pâle */
-    color: #856404; /* Brun/Doré foncé pour la lisibilité */
+    background-color: #FFF4CC;
+    /* Jaune pâle */
+    color: #856404;
+    /* Brun/Doré foncé pour la lisibilité */
     padding: 4px 10px;
     border-radius: 6px;
     font-size: 0.8em;
@@ -264,7 +310,8 @@ p { text-align: justify; margin-bottom: 20px; }
     border: 1px solid #FFEeba;
 }
 
-.stack-badge:hover, .stack-badge-bi:hover {
+.stack-badge:hover,
+.stack-badge-bi:hover {
     transform: scale(1.05);
     transition: transform 0.2s ease;
     cursor: default;
@@ -311,7 +358,7 @@ p { text-align: justify; margin-bottom: 20px; }
     overflow: hidden;
     margin: 15px 0;
     border: 1px solid #D1CDC7;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-gif {
@@ -321,5 +368,123 @@ p { text-align: justify; margin-bottom: 20px; }
 }
 
 .project-card:hover .project-gif {
-    transform: scale(1.02); /* Petit zoom au survol pour le côté interactif */
+    transform: scale(1.02);
+    /* Petit zoom au survol pour le côté interactif */
+}
+
+/*Pages de projets */
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.context-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #E2ECD9;
+    /* Ton vert fétiche */
+    margin-bottom: 30px;
+}
+
+.context-box p, .tech-deep-dive p {
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.dashboard-showcase img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+
+.caption {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Styles pour le Carrousel Swiper */
+.swiper {
+    overflow: hidden; /* Cache les images qui ne sont pas dans le cadre */
+    position: relative;
+}
+
+.swiper-wrapper {
+    display: flex; /* Aligne les images horizontalement */
+    transition-property: transform;
+}
+
+.swiper-slide {
+    flex-shrink: 0; /* Empêche les images de s'écraser */
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.mySwiper {
+    width: 100%;
+    max-width: 1000px; /* Ajuste selon tes préférences */
+    margin: 20px auto;
+    height: auto;
+    max-height: 70vh; /* 70% de la hauteur de l'écran maximum */
+    background-color: #fff; /* Pour voir si le bloc est là même sans image */
+    border: 1px solid #ddd;
+}
+
+.swiper-slide a {
+    display: block;
+    width: 100%;
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    max-height: 60vh;
+    object-fit: contain; /* Garde les proportions sans déformer */
+    cursor: zoom-in; /* Change le curseur en loupe */
+    transition: opacity 0.3s;    
+}
+
+.swiper-slide img:hover {
+    opacity: 0.9; /* Petit effet de survol */
+}
+
+
+/* Personnalisation des flèches */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #4A5D3F;
+    /* Ton vert foncé */
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Personnalisation de la pagination */
+.swiper-pagination-bullet-active {
+    background: #4A5D3F;
+    /* Ton vert foncé */
+}
+
+/* Légende sous l'image */
+.swiper-slide .caption {
+    margin: 15px 0;
+    font-size: 0.9em;
+    font-style: italic;
+    color: #666;
+    padding: 0 20px;
 }

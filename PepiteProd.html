@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Am-Tran / Portfolio Data Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="sidebar">
+            <h3>Dashboard</h3>
+            <ul>
+                <li><a href="#pathfinder"><i class="fas fa-rocket"></i> PathFinder</a></li>
+            </ul>
+            <div class="sidebar-contact">
+                <h3>Dépôts & Analyses</h3>
+                <ul>
+                    <li><a href="#films"><i class="fas fa-brain"></i> Recommandation Films</a></li>
+                    <li><a href="#velos"><i class="fas fa-chart-line"></i> Business Vélo</a></li>
+                    <li><a href="#nutrition"><i class="fas fa-flask"></i> Nutrition & Santé</a></li>
+                    <li><a href="#anime"><i class="fas fa-play-circle"></i> Analyse Animes</a></li>
+                    <li><a href="#logistique"><i class="fas fa-truck-loading"></i> Logistique Maquettes</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-contact">
+                <h3>Contact</h3>
+                <a href="https://www.linkedin.com/in/am%C3%A9lie-tran-981325a5/" target="_blank"><i
+                        class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/Am-Tran" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </nav>
+
+        <main class="content">
+            <header>
+                <h1>Amélie Tran / Portfolio</h1>
+            </header>
+            <section id="projet-cinema">
+                <div class="project-header">
+                    <a href="index.html" class="btn-small"><i class="fas fa-arrow-left"></i> Retour au Portfolio</a>
+                    <h2>🎬 Pépite Production : Moteur de Recommandation & Dashboarding</h2>
+                </div>
+
+                <div class="context-box">
+                    <h3>Le Challenge</h3>
+                    <p>Accompagner un cinéma local dans sa transition digitale en situation de <strong>Cold
+                            Start</strong> (aucune donnée utilisateur préalable). L'objectif était de créer un outil
+                        d'aide à la décision pour le directeur et un système de recommandation basé sur le catalogue
+                        existant.</p>
+                </div>
+
+                <div class="dashboard-showcase">
+                    <h3>Visionneuse du Dashboard Power BI</h3>                    
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="medias/PepitesProduction_page-0001.jpg" data-pswp-width="1920" data-pswp-height="1080">
+                                    <img src="medias/PepitesProduction_page-0001.jpg" alt="Réalisateurs" />
+                                </a>
+                                <p class="caption">Popularité des réalisateurs: possibilité de faire des rétrospectives</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="medias/PepitesProduction_page-0002.jpg" data-pswp-width="1920" data-pswp-height="1080">
+                                    <img src="medias/PepitesProduction_page-0002.jpg" alt="Acteurs" />
+                                </a>
+                                <p class="caption">Popularité des acteurs: possibilité de faire des rétrospectives.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="medias/PepitesProduction_page-0003.jpg" data-pswp-width="1920" data-pswp-height="1080">
+                                    <img src="medias/PepitesProduction_page-0003.jpg" alt="Par ratings" />
+                                </a>
+                                <p class="caption">Analyse par Ratings : Pour programmer des moments famille</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="medias/PepitesProduction_page-0004.jpg" data-pswp-width="1920" data-pswp-height="1080">
+                                    <img src="medias/PepitesProduction_page-0004.jpg" alt="Durée" />
+                                </a>
+                                <p class="caption">Analyse par Durée : Pour optimiser la programmation</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="medias/PepitesProduction_page-0005.jpg" data-pswp-width="1920" data-pswp-height="1080">
+                                    <img src="medias/PepitesProduction_page-0005.jpg" alt="Genre et année" />
+                                </a>
+                                <p class="caption">Analyse par Genre et Décennie: Pour organiser des soirées à thème</p>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="tech-deep-dive">
+                    <div class="card">
+                        <h3><i class="fas fa-brain"></i> Le Moteur de Recommandation</h3>
+                        <p>Utilisation de la <strong>similarité cosinus</strong> pour suggérer des films basés sur les
+                            métadonnées (genres, mots-clés, casting) afin de pallier l'absence d'historique de
+                            visionnage.</p>
+                        <div class="stack-list">
+                            <span class="stack-badge">Python</span>
+                            <span class="stack-badge">Scikit-Learn</span>
+                            <span class="stack-badge">Pandas</span>
+                            <span class="stack-badge-bi">Power BI</span>
+                        </div>
+                    </div>
+                </div>
+                    
+                </div>
+
+                
+            </section>
+
+
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script type="module">
+        import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe-lightbox.esm.min.js';
+        const lightbox = new PhotoSwipeLightbox({
+        gallery: '.swiper-wrapper', // On cible le carrousel
+        children: 'a', // On va entourer nos images de liens
+        pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.min.js')
+        });
+        lightbox.init();
+    </script>
+</body>
+
+</html>
