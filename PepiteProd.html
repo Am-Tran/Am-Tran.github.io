@@ -130,14 +130,28 @@
                 <div class="tech-deep-dive">
                     <div class="card">
                         <h3><i class="fas fa-brain"></i> Le Moteur de Recommandation</h3>
-                        <p>Utilisation de la <strong>similarité cosinus</strong> pour suggérer des films basés sur les
-                            métadonnées (genres, mots-clés, casting) afin de pallier l'absence d'historique de
-                            visionnage.</p>
-                        <div class="stack-list">
+                        <p>Pour contourner le problème du <strong>Cold Start</strong> (aucun historique de visionnage), j'ai développé un moteur de recommandation basé sur le contenu (Content-Based Filtering). L'objectif : analyser "l'ADN" de chaque film pour suggérer les œuvres structurellement les plus proches.</p>
+        
+                        <div class="ml-steps">
+                            <h4><i class="fas fa-cogs"></i> 1. Feature Engineering & NLP</h4>
+                            <p>J'ai traité deux flux de données pour créer une matrice unifiée :</p>
+                            <ul>
+                                <li><strong>Traitement du Langage (NLP) :</strong> Utilisation de <code>CountVectorizer</code> pour transformer le texte en vecteurs mathématiques (genres, mots-clés du synopsis, réalisateurs, scénaristes et trio d'acteurs principaux).</li>
+                                <li><strong>Normalisation Numérique :</strong> Application d'un <code>MinMaxScaler</code> sur les métriques de performance et d'engagement (scores IMDb, votes, likes Facebook, recettes mondiales, année et récompenses) afin qu'aucune échelle de valeur n'écrase les autres.</li>
+                            </ul>
+
+                            <h4><i class="fas fa-project-diagram"></i> 2. Choix de l'algorithme (KNN vs KMeans)</h4>
+                            <p>Après avoir expérimenté des approches par clustering (<code>KMeans</code>, <code>MiniBatchKMeans</code>), j'ai opté pour l'algorithme <strong>NearestNeighbors (KNN)</strong>. Ce choix technique permet une recommandation fluide et continue, évitant d'enfermer les films dans des catégories (clusters) trop rigides. Sur les différentes métriques de distance testées (Euclidienne, Manhattan), c'est la <strong>Similarité Cosinus</strong> qui a offert les résultats les plus pertinents.</p>
+
+                            <h4><i class="fas fa-filter"></i> 3. Affinage Métier (La touche UX)</h4>
+                            <p>Pour garantir une véritable aide à la découverte, j'ai encapsulé le modèle dans une fonction Python sur mesure incluant une règle d'exclusion des franchises. Cela évite l'écueil classique de recommander les suites directes d'un même film, favorisant ainsi la diversité des propositions.</p>
+                        </div>
+
+                        <div class="stack-list" style="margin-top: 20px;">
                             <span class="stack-badge">Python</span>
-                            <span class="stack-badge">Scikit-Learn</span>
-                            <span class="stack-badge">Pandas</span>
-                            <span class="stack-badge-bi">Power BI</span>
+                            <span class="stack-badge">Scikit-Learn (KNN)</span>
+                            <span class="stack-badge">NLP (CountVectorizer)</span>
+                            <span class="stack-badge">Pandas / Numpy</span>
                         </div>
                     </div>
                 </div>

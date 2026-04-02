@@ -589,6 +589,34 @@ p {
     text-align: center;
 }
 
+/* --- SECTION MACHINE LEARNING --- */
+.ml-steps h4 {
+    color: #4A5D3F; /* Ton vert technique */
+    font-size: 1.05em;
+    margin: 25px 0 10px 0;
+    border-bottom: 1px dashed #D1CDC7;
+    padding-bottom: 5px;
+}
+
+.ml-steps ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #434343;
+}
+
+.ml-steps li {
+    margin-bottom: 8px;
+}
+
+.ml-steps code {
+    background-color: #F0EDEA;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    color: #C09F8C;
+}
+
 /* ==========================================================================
    9. RESPONSIVE MOBILE
    ========================================================================== */
