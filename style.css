@@ -1,4 +1,6 @@
-/* --- VARIABLES ET RESET --- */
+/* ==========================================================================
+   1. RESET ET VARIABLES DE BASE
+   ========================================================================== */
 html {
     scroll-behavior: smooth;
 }
@@ -11,10 +13,11 @@ body {
     margin: 0;
 }
 
-/* --- MISE EN PAGE GLOBALE --- */
+/* ==========================================================================
+   2. MISE EN PAGE GLOBALE
+   ========================================================================== */
 .container {
     max-width: 1350px;
-    /* On passe de 1100 à 1350 */
     margin: 40px auto;
     display: flex;
     background-color: #F9F7F5;
@@ -24,117 +27,14 @@ body {
     min-height: 90vh;
 }
 
-/* --- SIDEBAR (MENU GAUCHE) --- */
-.sidebar {
-    width: 260px;
-    background-color: #f0edea;
-    padding: 40px 25px;
-    flex-shrink: 0;
-    border-right: 1px solid #D1CDC7;
-}
-
-.sidebar h3 {
-    text-align: left;
-    font-size: 0.9em;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 15px;
-    padding-left: 10px;
-    color: #C09F8C;
-
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar li {
-    margin-bottom: 12px;
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: #5D544F;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 0.95em;
-    transition: all 0.3s;
-}
-
-.sidebar a:hover {
-    color: #C09F8C;
-    padding-left: 5px;
-}
-
-.sidebar-contact {
-    margin-top: 25px;
-    /* Espace au-dessus du bloc */
-    padding-top: 20px;
-    /* Espace entre la ligne et le contenu */
-    border-top: 2px solid #ffffff;
-    /* La ligne blanche bien nette */
-}
-
-.sidebar-contact a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.9em;
-    margin-bottom: 10px;
-}
-
-.sidebar-contact i {
-    color: #C09F8C;
-    width: 20px;
-}
-
-.sidebar li a {
-    display: flex;
-    /* Active l'alignement flexible */
-    align-items: center;
-    /* Centre l'icône et le texte verticalement */
-    gap: 12px;
-    /* Crée un espace fixe et propre entre l'icône et le texte */
-    text-decoration: none;
-    color: #5D544F;
-    padding: 8px 12px;
-    border-radius: 8px;
-    transition: all 0.3s;
-}
-
-/* Si tu utilises des icônes FontAwesome, on leur donne une largeur fixe */
-/* Ça garantit que le texte commence au même pixel pour TOUTES les lignes */
-.sidebar li a i,
-.sidebar li a span {
-    width: 20px;
-    /* Largeur fixe pour l'icône */
-    text-align: center;
-    /* Centre l'icône dans ses 20px */
-    flex-shrink: 0;
-    /* Empêche l'icône de s'écraser */
-}
-
-.sidebar li a:hover {
-    background-color: #ffffff;
-    /* Fond blanc pur au survol */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    /* Petite ombre légère pour le relief */
-    color: #C09F8C;
-    /* Ta couleur d'accent */
-}
-
-/* --- CONTENU (DROITE) --- */
 .content {
     flex: 1;
     padding: 40px 60px;
-    min-width: 0; /* TRÈS IMPORTANT pour Flexbox : permet au texte de se réduire */
+    min-width: 0; /* TRÈS IMPORTANT pour Flexbox : empêche le texte de déborder */
     overflow-x: hidden;
 }
 
-
-h1,
-h2 {
+h1, h2 {
     font-family: 'Montserrat', sans-serif;
     color: #5D544F;
 }
@@ -156,7 +56,272 @@ p {
     margin-bottom: 20px;
 }
 
-/* --- GRILLE DE PROJETS --- */
+/* ==========================================================================
+   3. SIDEBAR (MENU DE NAVIGATION)
+   ========================================================================== */
+.sidebar {
+    width: 260px;
+    background-color: #f0edea;
+    padding: 40px 25px;
+    flex-shrink: 0;
+    border-right: 1px solid #D1CDC7;
+}
+
+.sidebar h3 {
+    text-align: left;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    color: #C09F8C;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 12px;
+}
+
+.sidebar li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #5D544F;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.sidebar li a i,
+.sidebar li a span {
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.sidebar li a:hover {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    color: #C09F8C;
+}
+
+.sidebar-contact {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #ffffff;
+}
+
+.sidebar-contact a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #5D544F;
+    transition: color 0.3s;
+}
+
+.sidebar-contact a:hover {
+    color: #C09F8C;
+}
+
+.sidebar-contact i {
+    color: #C09F8C;
+    width: 20px;
+}
+
+/* ==========================================================================
+   4. BOUTONS ET BADGES (COMPÉTENCES)
+   ========================================================================== */
+.btn, .btn-small {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn {
+    background-color: #C09F8C;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    margin: 10px 5px;
+}
+
+.btn:hover { background-color: #9CAF88; }
+
+.btn-small {
+    border: 1px solid #C09F8C;
+    color: #C09F8C;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.8em;
+}
+
+.btn-small:hover {
+    background: #C09F8C;
+    color: white;
+}
+
+.stack-list, .stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.stack-list { margin: 15px 0; }
+.stack-tags { margin-top: 15px; }
+
+.stack-badge {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #E2ECD9;
+    color: #4A5D3F;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border: 1px solid #D5E2C8;
+    transition: transform 0.2s ease;
+}
+
+.stack-badge-bi {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #FFF4CC;
+    color: #856404;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border: 1px solid #FFEeba;
+    transition: transform 0.2s ease;
+}
+
+.stack-badge:hover, .stack-badge-bi:hover {
+    transform: scale(1.05);
+    cursor: default;
+}
+
+/* ==========================================================================
+   5. SECTION "À PROPOS" ET "STACK TECHNIQUE"
+   ========================================================================== */
+#propos {
+    margin-top: 40px;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #D1CDC7;
+}
+
+.about-text p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #434343;
+}
+
+.value-item {
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 3px solid #E2ECD9;
+}
+
+.value-item h4 {
+    margin: 0 0 5px 0;
+    color: #5D544F;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.value-item h4 i {
+    color: #C09F8C;
+    font-size: 0.9em;
+}
+
+.value-item p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #666;
+}
+
+/* Stack imbriquée dans À propos */
+#stack-technique {
+    margin-top: 40px;
+}
+
+#stack-technique h3 {
+    font-size: 1.3em;
+    color: #5D544F;
+    border-bottom: 2px solid #E2ECD9;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.certification-box {
+    background-color: #FDFBF9;
+    border: 1px dashed #C09F8C;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.certification-box h4 {
+    color: #4A5D3F;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.cert-results {
+    color: #4A5D3F;
+    font-size: 0.95em;
+    background: #E2ECD9;
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.cert-results i { margin-right: 8px; }
+
+.stack-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.stack-category {
+    background: #F9F7F5;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #E6E2DD;
+}
+
+.stack-category h4 {
+    margin-top: 0;
+    color: #C09F8C;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #E2ECD9;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ==========================================================================
+   6. GRILLE DES PROJETS (INDEX)
+   ========================================================================== */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -186,6 +351,13 @@ p {
     border: 2px solid #C09F8C;
 }
 
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
 .tag {
     background: #C09F8C;
     color: white;
@@ -196,135 +368,6 @@ p {
     font-weight: bold;
 }
 
-.project-card h3 {
-    margin: 15px 0 10px 0;
-    color: #5D544F;
-    text-align: left;
-}
-
-.stack {
-    font-size: 0.85em;
-    color: #888;
-}
-
-/* --- BOUTONS --- */
-.btn,
-.btn-small {
-    display: inline-block;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    text-align: center;
-}
-
-.btn {
-    background-color: #C09F8C;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-size: 0.85em;
-    text-transform: uppercase;
-    margin: 10px 5px;
-}
-
-.btn:hover {
-    background-color: #9CAF88;
-}
-
-.btn-small {
-    border: 1px solid #C09F8C;
-    color: #C09F8C;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 0.8em;
-}
-
-.btn-small:hover {
-    background: #C09F8C;
-    color: white;
-}
-
-/* --- IMAGES --- */
-.image-centree {
-    display: block;
-    margin: 30px auto;
-    width: 50%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* --- RESPONSIVE --- */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        margin: 0;
-    }
-
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: static;
-    }
-
-    .content {
-        padding: 20px;
-    }
-}
-
-/* --- LOOK TECH & BADGES --- */
-
-/* La police "Code" pour les technos */
-.stack-list {
-    margin: 15px 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.stack-badge {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #E2ECD9;
-    /* Ton vert très éclairci */
-    color: #4A5D3F;
-    /* Vert foncé pour le contraste */
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 0.8em;
-    font-weight: bold;
-    margin-right: 5px;
-    display: inline-block;
-    border: 1px solid #D5E2C8;
-}
-
-.stack-badge-bi {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #FFF4CC;
-    /* Jaune pâle */
-    color: #856404;
-    /* Brun/Doré foncé pour la lisibilité */
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 0.8em;
-    font-weight: bold;
-    margin-right: 5px;
-    display: inline-block;
-    border: 1px solid #FFEeba;
-}
-
-.stack-badge:hover,
-.stack-badge-bi:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s ease;
-    cursor: default;
-}
-
-/* Header de carte façon GitHub */
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
 .repo-status {
     font-size: 0.7em;
     color: #888;
@@ -333,20 +376,21 @@ p {
     border-radius: 10px;
 }
 
-/* Titres de projets avec icônes */
+.project-card h3 {
+    margin: 15px 0 10px 0;
+    color: #5D544F;
+    text-align: left;
+}
+
 .project-card h3 i {
     margin-right: 10px;
     color: #C09F8C;
     font-size: 0.9em;
-}
-
-/* Animation sur les icônes au survol */
-.project-card:hover h3 i {
-    transform: scale(1.2);
     transition: 0.3s;
 }
 
-/* Footer de carte */
+.project-card:hover h3 i { transform: scale(1.2); }
+
 .card-footer {
     margin-top: auto;
     padding-top: 15px;
@@ -367,12 +411,11 @@ p {
     transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-gif {
-    transform: scale(1.02);
-    /* Petit zoom au survol pour le côté interactif */
-}
+.project-card:hover .project-gif { transform: scale(1.02); }
 
-/*Pages de projets */
+/* ==========================================================================
+   7. PAGES DE PROJETS DÉTAILLÉS (EX: CINÉMA)
+   ========================================================================== */
 .project-header {
     display: flex;
     align-items: center;
@@ -385,7 +428,6 @@ p {
     padding: 20px;
     border-radius: 8px;
     border-left: 5px solid #E2ECD9;
-    /* Ton vert fétiche */
     margin-bottom: 30px;
 }
 
@@ -410,19 +452,29 @@ p {
     text-align: center;
 }
 
-/* Styles pour le Carrousel Swiper */
+.image-centree {
+    display: block;
+    margin: 30px auto;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   8. CARROUSEL SWIPER & LIGHTBOX
+   ========================================================================== */
 .swiper {
-    overflow: hidden; /* Cache les images qui ne sont pas dans le cadre */
+    overflow: hidden; 
     position: relative;
 }
 
 .swiper-wrapper {
-    display: flex; /* Aligne les images horizontalement */
+    display: flex; 
     transition-property: transform;
 }
 
 .swiper-slide {
-    flex-shrink: 0; /* Empêche les images de s'écraser */
+    flex-shrink: 0; 
     width: 100%;
     height: auto;
     position: relative;
@@ -430,12 +482,13 @@ p {
 
 .mySwiper {
     width: 100%;
-    max-width: 1000px; /* Ajuste selon tes préférences */
+    max-width: 1000px;
     margin: 20px auto;
     height: auto;
-    max-height: 70vh; /* 70% de la hauteur de l'écran maximum */
-    background-color: #fff; /* Pour voir si le bloc est là même sans image */
+    max-height: 70vh;
+    background-color: #fff;
     border: 1px solid #ddd;
+    border-radius: 12px;
 }
 
 .swiper-slide a {
@@ -446,21 +499,18 @@ p {
 .swiper-slide img {
     max-width: 100%;
     max-height: 60vh;
-    object-fit: contain; /* Garde les proportions sans déformer */
-    cursor: zoom-in; /* Change le curseur en loupe */
+    object-fit: contain;
+    cursor: zoom-in;
     transition: opacity 0.3s;    
 }
 
 .swiper-slide img:hover {
-    opacity: 0.9; /* Petit effet de survol */
+    opacity: 0.9;
 }
 
-
-/* Personnalisation des flèches */
 .swiper-button-next,
 .swiper-button-prev {
     color: #4A5D3F;
-    /* Ton vert foncé */
     background-color: rgba(255, 255, 255, 0.8);
     width: 50px;
     height: 50px;
@@ -474,17 +524,37 @@ p {
     font-weight: bold;
 }
 
-/* Personnalisation de la pagination */
 .swiper-pagination-bullet-active {
     background: #4A5D3F;
-    /* Ton vert foncé */
 }
 
-/* Légende sous l'image */
 .swiper-slide .caption {
     margin: 15px 0;
     font-size: 0.9em;
     font-style: italic;
     color: #666;
     padding: 0 20px;
+}
+
+/* ==========================================================================
+   9. RESPONSIVE MOBILE
+   ========================================================================== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .content {
+        padding: 20px;
+    }
 }
