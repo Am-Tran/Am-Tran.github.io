@@ -30,13 +30,41 @@ body {
 .content {
     flex: 1;
     padding: 40px 60px;
-    min-width: 0; /* TRÈS IMPORTANT pour Flexbox : empêche le texte de déborder */
+    min-width: 0;
+    /* TRÈS IMPORTANT pour Flexbox : empêche le texte de déborder */
     overflow-x: hidden;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: 'Montserrat', sans-serif;
     color: #5D544F;
+}
+
+/* Style de l'introduction (Elevator Pitch) */
+header {
+    margin-bottom: 40px;
+}
+
+.intro {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: #5D544F;
+    border-left: 4px solid #C09F8C;
+    /* La petite ligne beige élégante à gauche */
+    padding-left: 20px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.intro strong {
+    color: #4A5D3F;
+    /* Ton vert foncé technique pour faire ressortir Python/SQL */
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
 }
 
 h1 {
@@ -142,7 +170,8 @@ p {
 /* ==========================================================================
    4. BOUTONS ET BADGES (COMPÉTENCES)
    ========================================================================== */
-.btn, .btn-small {
+.btn,
+.btn-small {
     display: inline-block;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -159,7 +188,9 @@ p {
     margin: 10px 5px;
 }
 
-.btn:hover { background-color: #9CAF88; }
+.btn:hover {
+    background-color: #9CAF88;
+}
 
 .btn-small {
     border: 1px solid #C09F8C;
@@ -174,14 +205,20 @@ p {
     color: white;
 }
 
-.stack-list, .stack-tags {
+.stack-list,
+.stack-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-.stack-list { margin: 15px 0; }
-.stack-tags { margin-top: 15px; }
+.stack-list {
+    margin: 15px 0;
+}
+
+.stack-tags {
+    margin-top: 15px;
+}
 
 .stack-badge {
     font-family: 'Courier New', Courier, monospace;
@@ -207,7 +244,8 @@ p {
     transition: transform 0.2s ease;
 }
 
-.stack-badge:hover, .stack-badge-bi:hover {
+.stack-badge:hover,
+.stack-badge-bi:hover {
     transform: scale(1.05);
     cursor: default;
 }
@@ -291,7 +329,9 @@ p {
     display: inline-block;
 }
 
-.cert-results i { margin-right: 8px; }
+.cert-results i {
+    margin-right: 8px;
+}
 
 .stack-container {
     display: grid;
@@ -389,7 +429,9 @@ p {
     transition: 0.3s;
 }
 
-.project-card:hover h3 i { transform: scale(1.2); }
+.project-card:hover h3 i {
+    transform: scale(1.2);
+}
 
 .card-footer {
     margin-top: auto;
@@ -411,7 +453,9 @@ p {
     transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-gif { transform: scale(1.02); }
+.project-card:hover .project-gif {
+    transform: scale(1.02);
+}
 
 /* ==========================================================================
    7. PAGES DE PROJETS DÉTAILLÉS (EX: CINÉMA)
@@ -431,7 +475,8 @@ p {
     margin-bottom: 30px;
 }
 
-.context-box p, .tech-deep-dive p {
+.context-box p,
+.tech-deep-dive p {
     white-space: normal;
     word-wrap: break-word;
 }
@@ -464,17 +509,17 @@ p {
    8. CARROUSEL SWIPER & LIGHTBOX
    ========================================================================== */
 .swiper {
-    overflow: hidden; 
+    overflow: hidden;
     position: relative;
 }
 
 .swiper-wrapper {
-    display: flex; 
+    display: flex;
     transition-property: transform;
 }
 
 .swiper-slide {
-    flex-shrink: 0; 
+    flex-shrink: 0;
     width: 100%;
     height: auto;
     position: relative;
@@ -485,10 +530,11 @@ p {
     max-width: 1000px;
     margin: 20px auto;
     height: auto;
-    max-height: 70vh;
+    max-height: 80vh;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 12px;
+    padding-bottom: 60px;
 }
 
 .swiper-slide a {
@@ -501,7 +547,7 @@ p {
     max-height: 60vh;
     object-fit: contain;
     cursor: zoom-in;
-    transition: opacity 0.3s;    
+    transition: opacity 0.3s;
 }
 
 .swiper-slide img:hover {
@@ -528,12 +574,19 @@ p {
     background: #4A5D3F;
 }
 
+.swiper-pagination {
+    bottom: 15px !important; 
+}
+
 .swiper-slide .caption {
-    margin: 15px 0;
-    font-size: 0.9em;
+    margin-top: 25px;  
+    margin-bottom: 10px;
+    font-size: 1.1em;    
     font-style: italic;
-    color: #666;
-    padding: 0 20px;
+    color: #4A5D3F;     
+    padding: 0 40px;    
+    line-height: 1.5;    
+    text-align: center;
 }
 
 /* ==========================================================================
