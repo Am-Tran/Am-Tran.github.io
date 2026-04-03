@@ -131,7 +131,10 @@
                     <div class="card">
                         <h3><i class="fas fa-brain"></i> Le Moteur de Recommandation</h3>
                         <p>Pour contourner le problème du <strong>Cold Start</strong> (aucun historique de visionnage), j'ai développé un moteur de recommandation basé sur le contenu (Content-Based Filtering). L'objectif : analyser "l'ADN" de chaque film pour suggérer les œuvres structurellement les plus proches.</p>
-        
+                        <div class="pipeline-visual">
+                            <img src="medias/WildFlix_Logigramme.png" alt="Pipeline ML"
+                                style="width:100%; border-radius:8px; margin-bottom:20px;">
+                        </div>
                         <div class="ml-steps">
                             <h4><i class="fas fa-cogs"></i> 1. Feature Engineering & NLP</h4>
                             <p>J'ai traité deux flux de données pour créer une matrice unifiée :</p>
@@ -143,8 +146,19 @@
                             <h4><i class="fas fa-project-diagram"></i> 2. Choix de l'algorithme (KNN vs KMeans)</h4>
                             <p>Après avoir expérimenté des approches par clustering (<code>KMeans</code>, <code>MiniBatchKMeans</code>), j'ai opté pour l'algorithme <strong>NearestNeighbors (KNN)</strong>. Ce choix technique permet une recommandation fluide et continue, évitant d'enfermer les films dans des catégories (clusters) trop rigides. Sur les différentes métriques de distance testées (Euclidienne, Manhattan), c'est la <strong>Similarité Cosinus</strong> qui a offert les résultats les plus pertinents.</p>
 
-                            <h4><i class="fas fa-filter"></i> 3. Affinage Métier (La touche UX)</h4>
-                            <p>Pour garantir une véritable aide à la découverte, j'ai encapsulé le modèle dans une fonction Python sur mesure incluant une règle d'exclusion des franchises. Cela évite l'écueil classique de recommander les suites directes d'un même film, favorisant ainsi la diversité des propositions.</p>
+                            <h4><i class="fas fa-chess-knight"></i> 3. Affinage Métier & Intelligence Locale</h4>
+                                <p>
+                                    Au-delà des algorithmes, j'ai intégré une dimension stratégique pour coller à la réalité du terrain :
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Filtre Anti-Franchise :</strong> Une règle métier sur-mesure pour limiter les doublons d'une même saga et favoriser la diversité des découvertes.
+                                    </li>
+                                    <li>
+                                        <strong>Apprentissage Territorial :</strong> Le moteur est conçu pour s'enrichir à chaque interaction. Au fur et à mesure que les comptes utilisateurs sont renseignés, les données de visionnage alimentent l'algorithme. 
+                                        À terme, cela permet de passer d'une recommandation globale à une <strong>offre hyper-locale</strong>, calquée sur les goûts spécifiques du public de ce cinéma creusois.
+                                    </li>
+                                </ul>
                         </div>
 
                         <div class="stack-list" style="margin-top: 20px;">
@@ -154,15 +168,23 @@
                             <span class="stack-badge">Pandas / Numpy</span>
                         </div>
                     </div>
-                </div>
-
-    </div>
-
-
-    </section>
-
-
-    </main>
+                </div>  
+                <div class="project-footer">
+                    <h4><i class="fab fa-github"></i> Exploration du Dépôt & Collaboration</h4>
+                    <p>
+                        Ce projet est le fruit d’un travail collaboratif mené en équipe de quatre. 
+                        J'ai pris en charge les volets <strong>Machine Learning</strong> et <strong>Dashboard de Pilotage</strong>, 
+                        tandis qu'<a href="https://plok-code.github.io/index.html" target="_blank" class="mentor-link">Idris</a> 
+                        a réalisé l’intégralité de l’infrastructure technique : du pipeline de données (scraping & cleaning) au développement de l’interface web. 
+                        Ce dépôt témoigne d'une synergie collective où chaque brique technique a été pensée pour servir l'expérience utilisateur finale.
+                    </p>
+                    <a href="URL_DU_REPO_GITHUB" target="_blank" class="btn-github">
+                        <i class="fab fa-github"></i> Voir le code sur GitHub
+                    </a>
+                </div>          
+  
+            </section>
+        </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>

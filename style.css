@@ -609,12 +609,15 @@ p {
 }
 
 .ml-steps code {
-    background-color: #F0EDEA;
+    background-color: #f4f1ee;  
+    color: #4A5D3F; 
     padding: 2px 6px;
     border-radius: 4px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.9em;
-    color: #C09F8C;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9em; 
+    font-weight: 500;  
+    border: 1px solid #D1CDC7;
+    white-space: nowrap;
 }
 
 /* ==========================================================================
@@ -638,4 +641,51 @@ p {
     .content {
         padding: 20px;
     }
+}
+
+/* --- FOOTER DE PROJET & COLLAB --- */
+.project-footer {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #f0edea;
+    border-radius: 12px;
+    border: 1px solid #D1CDC7;
+}
+
+.project-footer h4 {
+    margin-top: 0;
+    color: #5D544F;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mentor-link {
+    color: #4A5D3F; /* Ton vert expert */
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.mentor-link:hover {
+    border-bottom: 1px solid #4A5D3F;
+}
+
+.btn-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #434343; /* Noir/Gris anthracite pour le côté GitHub */
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.btn-github:hover {
+    background-color: #C09F8C; /* Rappel du beige au survol */
 }
