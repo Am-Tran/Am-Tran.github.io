@@ -698,6 +698,113 @@ html {
     line-height: 1.5;
     color: #555;
 }
+
+/* --- TABS DASHBOARD --- */
+.dashboard-container {
+    background: #f9f7f5;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #e6e2dd;
+    margin-top: 20px;
+}
+
+.dashboard-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    overflow-x: auto; /* Pour mobile */
+    padding-bottom: 10px;
+}
+
+.tab-btn {
+    padding: 10px 18px;
+    border: none;
+    background: #eee;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: #666;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.tab-btn.active {
+    background: #4A5D3F;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+/* --- MISE EN PAGE VERTICALE DU DASHBOARD --- */
+.tab-grid {
+    display: flex;
+    flex-direction: column; /* On empile les éléments */
+    gap: 25px;
+    align-items: center; /* On centre le contenu */
+}
+
+.tab-image {
+    width: 100%; /* Prend toute la largeur disponible */
+}
+
+.tab-image img {
+    width: 100%;
+    height: auto;
+    max-width: 1100px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    border: 1px solid #e6e2dd;       
+}
+
+.tab-text {
+    width: 100%;
+    max-width: 900px; /* On limite un peu la largeur du texte pour la lecture */
+    text-align: left; /* Garde le texte aligné à gauche pour le confort */
+    padding: 0 10px 20px 10px;
+}
+
+.tab-text h4 {
+    font-size: 1.4rem;
+    color: #4A5D3F;
+    margin-bottom: 15px;
+    border-left: 4px solid #C09F8C; /* Petite barre d'accent pour le titre */
+    padding-left: 15px;
+}
+
+.tab-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.insight-badge {
+    margin-top: 20px;
+    background: #4A5D3F; /* On peut le mettre en vert pour qu'il ressorte mieux */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .tab-grid { grid-template-columns: 1fr; }
+}
+
 /* ==========================================================================
    9. RESPONSIVE MOBILE
    ========================================================================== */

@@ -33,3 +33,23 @@ if (swiperElement) {
         },
     });
 }
+
+function openTab(evt, tabName) {
+    var i, tabContent, tabLinks;
+    
+    // Cache tous les contenus
+    tabContent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
+    }
+
+    // Enlève la classe "active" de tous les boutons
+    tabLinks = document.getElementsByClassName("tab-btn");
+    for (i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+    }
+
+    // Affiche l'onglet actuel et ajoute la classe "active" au bouton
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
