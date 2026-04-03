@@ -74,27 +74,27 @@
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href="medias/PepitesProduction_page-0001.jpg" data-pswp-width="1920"
+                                <a href="medias/CineCreuse_PepiteProd_01.jpg" data-pswp-width="1920"
                                     data-pswp-height="1080">
-                                    <img src="medias/PepitesProduction_page-0001.jpg"
+                                    <img src="medias/CineCreuse_PepiteProd_01.jpg"
                                         alt="Dashboard Power BI : Analyse de la popularité des réalisateurs" />
                                 </a>
                                 <p class="caption"><strong>Analyse par Réalisateur :</strong> Identification des profils
                                     plébiscités pour concevoir des événements ciblés (rétrospectives).</p>
                             </div>
                             <div class="swiper-slide">
-                                <a href="medias/PepitesProduction_page-0002.jpg" data-pswp-width="1920"
+                                <a href="medias/CineCreuse_PepiteProd_02.jpg" data-pswp-width="1920"
                                     data-pswp-height="1080">
-                                    <img src="medias/PepitesProduction_page-0002.jpg"
+                                    <img src="medias/CineCreuse_PepiteProd_02.jpg"
                                         alt="Dashboard Power BI : Analyse de la popularité des acteurs" />
                                 </a>
                                 <p class="caption"><strong>Analyse du Casting :</strong> Évaluation de la popularité des
                                     acteurs pour fidéliser les communautés de fans via des cycles dédiés.</p>
                             </div>
                             <div class="swiper-slide">
-                                <a href="medias/PepitesProduction_page-0003.jpg" data-pswp-width="1920"
+                                <a href="medias/CineCreuse_PepiteProd_03.jpg" data-pswp-width="1920"
                                     data-pswp-height="1080">
-                                    <img src="medias/PepitesProduction_page-0003.jpg"
+                                    <img src="medias/CineCreuse_PepiteProd_03.jpg"
                                         alt="Dashboard Power BI : Segmentation du catalogue par classification d'âge (Ciblage public)" />
                                 </a>
                                 <p class="caption"><strong>Ciblage par Public :</strong> Analyse des classifications
@@ -102,18 +102,18 @@
                                     programmation familiale).</p>
                             </div>
                             <div class="swiper-slide">
-                                <a href="medias/PepitesProduction_page-0004.jpg" data-pswp-width="1920"
+                                <a href="medias/CineCreuse_PepiteProd_04.jpg" data-pswp-width="1920"
                                     data-pswp-height="1080">
-                                    <img src="medias/PepitesProduction_page-0004.jpg"
+                                    <img src="medias/CineCreuse_PepiteProd_04.jpg"
                                         alt="Dashboard Power BI : Analyse du catalogue par durée des films" />
                                 </a>
                                 <p class="caption"><strong>Optimisation des Grilles :</strong> Analyse des durées pour
                                     maximiser l'occupation des salles et rentabiliser les créneaux horaires vacants.</p>
                             </div>
                             <div class="swiper-slide">
-                                <a href="medias/PepitesProduction_page-0005.jpg" data-pswp-width="1920"
+                                <a href="medias/CineCreuse_PepiteProd_05.jpg" data-pswp-width="1920"
                                     data-pswp-height="1080">
-                                    <img src="medias/PepitesProduction_page-0005.jpg"
+                                    <img src="medias/CineCreuse_PepiteProd_05.jpg"
                                         alt="Dashboard Power BI : Répartition du catalogue par genres et décennies" />
                                 </a>
                                 <p class="caption"><strong>Création d'Événements :</strong> Croisement des genres et des
@@ -132,7 +132,7 @@
                         <h3><i class="fas fa-brain"></i> Le Moteur de Recommandation</h3>
                         <p>Pour contourner le problème du <strong>Cold Start</strong> (aucun historique de visionnage), j'ai développé un moteur de recommandation basé sur le contenu (Content-Based Filtering). L'objectif : analyser "l'ADN" de chaque film pour suggérer les œuvres structurellement les plus proches.</p>
                         <div class="pipeline-visual">
-                            <img src="medias/WildFlix_Logigramme.png" alt="Pipeline ML"
+                            <img src="medias/CineCreuse__Logigramme.png" alt="Pipeline ML"
                                 style="width:100%; border-radius:8px; margin-bottom:20px;">
                         </div>
                         <div class="ml-steps">
@@ -178,7 +178,7 @@
                         a réalisé l’intégralité de l’infrastructure technique : du pipeline de données (scraping & cleaning) au développement de l’interface web. 
                         Ce dépôt témoigne d'une synergie collective où chaque brique technique a été pensée pour servir l'expérience utilisateur finale.
                     </p>
-                    <a href="URL_DU_REPO_GITHUB" target="_blank" class="btn-github">
+                    <a href="https://github.com/Plok-Code/Pepite-Production" target="_blank" class="btn-github">
                         <i class="fab fa-github"></i> Voir le code sur GitHub
                     </a>
                 </div>          
@@ -186,6 +186,9 @@
             </section>
         </main>
     </div>
+    <a href="#" id="backToTop" title="Retour en haut">
+    <i class="fas fa-chevron-up"></i>
+    </a>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
     <script type="module">
@@ -193,12 +196,12 @@
 
         const lightbox = new PhotoSwipeLightbox({
             gallery: '.swiper-wrapper',
-            children: '.swiper-slide a', // On cible le lien PRÉCISÉMENT à l'intérieur du slide
-            pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.esm.min.js') // C'est ici qu'il manquait le ".esm" !
+            children: '.swiper-slide a',
+            pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.esm.min.js')
         });
 
         lightbox.init();
-    </script>
+    </script>    
 </body>
 
 </html>

@@ -167,6 +167,43 @@ p {
     width: 20px;
 }
 
+/* --- BOUTON RETOUR EN HAUT --- */
+#backToTop {
+    position: fixed;
+    bottom: 30px;      /* Distance du bas */
+    right: 110px;       /* Distance de la droite */
+    width: 45px;
+    height: 45px;
+    background-color: #C09F8C; /* Ton beige d'action */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    z-index: 2000;     /* Pour être au-dessus de tout, même de la lightbox */
+    opacity: 0;        /* Invisible par défaut */
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#backToTop:hover {
+    background-color: #4A5D3F; /* Devient vert au survol pour le feedback */
+    transform: translateY(-5px); /* Petit saut vers le haut */
+}
+
+/* Optionnel : pour un scroll fluide (si pas déjà mis) */
+html {
+    scroll-behavior: smooth;
+}
+
 /* ==========================================================================
    4. BOUTONS ET BADGES (COMPÉTENCES)
    ========================================================================== */
