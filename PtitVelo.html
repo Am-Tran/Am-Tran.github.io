@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Am-Tran / Portfolio Data Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="sidebar">
+            <h3>Dashboard</h3>
+            <ul>
+                <li><a href="#pathfinder"><i class="fas fa-rocket"></i> PathFinder</a></li>
+            </ul>
+            <div class="sidebar-contact">
+                <h3>Dépôts & Analyses</h3>
+                <ul>
+                    <li><a href="#films"><i class="fas fa-brain"></i> Recommandation Films</a></li>
+                    <li><a href="#velos"><i class="fas fa-chart-line"></i> Business Vélo</a></li>
+                    <li><a href="#nutrition"><i class="fas fa-flask"></i> Nutrition & Santé</a></li>
+                    <li><a href="#anime"><i class="fas fa-play-circle"></i> Analyse Animes</a></li>
+                    <li><a href="#logistique"><i class="fas fa-truck-loading"></i> Logistique Maquettes</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-contact">
+                <h3>Contact</h3>
+                <a href="https://www.linkedin.com/in/am%C3%A9lie-tran-981325a5/" target="_blank"><i
+                        class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/Am-Tran" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </nav>
+
+        <main class="content">
+            <header>
+                <h1>Amélie Tran / Portfolio</h1>
+            </header>
+            <section id="projet-velo">
+                <div class="project-header">
+                    <a href="index.html" class="btn-small"><i class="fas fa-arrow-left"></i> Retour au Portfolio</a>
+                    <h2><i class="fas fa-bicycle"></i> Business Intelligence : Stratégie de Lancement d'une Boutique de Cyclisme</h2>
+                </div>
+
+                <div class="context-box">
+                    <h3><i class="fas fa-lightbulb"></i> Le Challenge</h3>
+                    <p>
+                        Comment garantir la stabilité et la rentabilité d'une petite structure face à l'incertitude du marché ? 
+                        Avec un capital limité, chaque erreur de stock ou d'emplacement peut être fatale. 
+                        Mon défi était de transformer une intuition commerciale en une <strong>stratégie de pilotage infaillible</strong> pour convaincre les investisseurs.
+                    </p>
+                </div>
+
+                <div class="section-intro">
+                    <h3><i class="fas fa-chess-knight"></i> Réflexion Stratégique</h3>
+                    <p>
+                        Ma démarche a été guidée par un principe fondamental : la <strong>maîtrise du risque financier</strong>. 
+                        Pour une petite boutique, la survie ne dépend pas du volume global, mais de la pertinence locale. 
+                        J'ai donc articulé ma réflexion autour de trois axes :
+                    </p>
+                    
+                    <div class="strategy-grid">
+                        <div class="strategy-card">
+                            <div class="strategy-icon"><i class="fas fa-map-marked-alt"></i></div>
+                            <h4>Implantation Stratégique</h4>
+                            <p>Identification d'un "point d'équilibre" territorial : une zone à forte densité urbaine et pouvoir d'achat stable, mais non saturée, où l'offre spécialisée reste insuffisante.</p>
+                        </div>
+
+                        <div class="strategy-card">
+                            <div class="strategy-icon"><i class="fas fa-boxes"></i></div>
+                            <h4>Équilibre Flux/Marge</h4>
+                            <p>Stratégie de stock hybride : volume sur les accessoires (générateurs de flux) et flux tendu sur les vélos haute performance (VAE, Gravel) pour optimiser la trésorerie.</p>
+                        </div>
+
+                        <div class="strategy-card">
+                            <div class="strategy-icon"><i class="fas fa-chart-line"></i></div>
+                            <h4>Agilité Décisionnelle</h4>
+                            <p>Conception d'un outil de pilotage pour pivoter instantanément selon les tendances de ventes et l'évolution de la clientèle, transformant la donnée brute en décisions concrètes.</p>
+                        </div>
+                    </div>
+                </div>  
+            </section>
+        </main>
+    </div>
+    <a href="#" id="backToTop" title="Retour en haut">
+    <i class="fas fa-chevron-up"></i>
+    </a>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script type="module">
+        import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe-lightbox.esm.min.js';
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '.swiper-wrapper',
+            children: '.swiper-slide a',
+            pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.esm.min.js')
+        });
+
+        lightbox.init();
+    </script>    
+</body>
+
+</html>

@@ -658,6 +658,47 @@ html {
 }
 
 /* ==========================================================================
+   8b. GRILLE DE STRATEGIE
+   ========================================================================== */
+
+.strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.strategy-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #E6E2DD;
+    transition: transform 0.3s ease;
+}
+
+.strategy-card:hover {
+    transform: translateY(-5px);
+    border-color: #C09F8C; /* Ton beige d'accent */
+}
+
+.strategy-icon {
+    font-size: 1.5rem;
+    color: #4A5D3F; /* Ton vert expert */
+    margin-bottom: 15px;
+}
+
+.strategy-card h4 {
+    color: #4A5D3F;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.strategy-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+}
+/* ==========================================================================
    9. RESPONSIVE MOBILE
    ========================================================================== */
 @media (max-width: 768px) {
