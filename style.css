@@ -396,6 +396,7 @@ html {
     gap: 10px;
 }
 
+
 /* ==========================================================================
    6. GRILLE DES PROJETS (INDEX)
    ========================================================================== */
@@ -497,11 +498,67 @@ html {
 /* ==========================================================================
    7. PAGES DE PROJETS DÉTAILLÉS (EX: CINÉMA)
    ========================================================================== */
+
+.site-branding h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #C09F8C; 
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
 .project-header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
     margin-bottom: 30px;
+}
+
+/* La nouvelle "Lettrine" */
+.project-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    background-color: #F1F1F1; /* Un gris très doux ou la couleur du thème */
+    color: #4A5D3F;
+    border: 1px solid #D1CDC7;
+    border-radius: 12px;
+    font-size: 2.8rem; /* On booste la taille de l'émoji */
+    flex-shrink: 0;
+    box-shadow: 4px 4px 0px #00000014;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+}
+
+/* L'encadré Machine Learning */
+.specialty-tag {
+    display: inline-block;
+    width: fit-content;
+    padding: 2px 12px;
+    background-color: #E2ECD9;
+    color: #4A5D3F;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;    
+}
+
+.title-container h2 {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: #5D544F;
 }
 
 .context-box {
