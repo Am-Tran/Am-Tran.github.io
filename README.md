@@ -32,6 +32,6 @@ L'architecture technique et le design de ce portfolio ont été réalisés avec 
 📧 Contact
 Pour toute question sur mes analyses ou une opportunité de collaboration :
 
-[Mon profil LinkedIn](www.linkedin.com/in/amelietran-data/)
+[Mon profil LinkedIn](https://www.linkedin.com/in/amelietran-data/)
 
 Dépôt maintenu par une Data Analyst qui préfère les jointures SQL au CSS. 😉
